@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Itinerary" representedClassName="Itinerary" syncable="YES">
+        <relationship name="waypoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="itinerary" inverseEntity="Waypoint" syncable="YES"/>
+    </entity>
+    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vicinity" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="itinerary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Itinerary" inverseName="waypoints" inverseEntity="Itinerary" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Itinerary" positionX="-272" positionY="-135" width="128" height="58"/>
+        <element name="Waypoint" positionX="18" positionY="-205" width="128" height="148"/>
+    </elements>
+</model>

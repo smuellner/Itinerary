@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - PlacesAndRouting (1.0.0):
+    - AFNetworking (~> 3.0.4)
+    - YYModel (~> 1.0.1)
+  - SCLAlertView-Objective-C (1.0.2)
+  - YYModel (1.0.2)
+
+DEPENDENCIES:
+  - MagicalRecord (~> 2.3.2)
+  - PlacesAndRouting (from `./PlacesAndRouting`)
+  - SCLAlertView-Objective-C (~> 1.0.2)
+
+EXTERNAL SOURCES:
+  PlacesAndRouting:
+    :path: "./PlacesAndRouting"
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  PlacesAndRouting: 5a99022519718b17a138a436d7c1a47e1a48a1b6
+  SCLAlertView-Objective-C: 25f7ea3a3526dde177d8b8056a0b88fe4187651e
+  YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
+
+COCOAPODS: 0.39.0

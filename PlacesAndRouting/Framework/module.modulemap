@@ -1,0 +1,5 @@
+framework module PlacesAndRouting {
+    umbrella header "PlacesAndRouting.h"
+    export *
+    module * { export * }
+}

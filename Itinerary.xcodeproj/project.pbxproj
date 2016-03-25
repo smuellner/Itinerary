@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1536114F1CA33A0900F21AA8 /* ItineraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1536114E1CA33A0900F21AA8 /* ItineraryTableViewController.m */; };
+		153611521CA3F6A000F21AA8 /* WaypointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 153611511CA3F6A000F21AA8 /* WaypointTableViewCell.m */; };
+		153FD6271CA1C69000969E9B /* ItineraryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153FD6251CA1C69000969E9B /* ItineraryModel.xcdatamodeld */; };
+		153FD6311CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 153FD62A1CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m */; };
+		153FD6321CA1CE1A00969E9B /* Itinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 153FD62C1CA1CE1A00969E9B /* Itinerary.m */; };
+		153FD63F1CA1CF8600969E9B /* Waypoint+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 153FD63C1CA1CF8600969E9B /* Waypoint+CoreDataProperties.m */; };
+		153FD6401CA1CF8600969E9B /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 153FD63E1CA1CF8600969E9B /* Waypoint.m */; };
+		153FD6461CA1D0DF00969E9B /* Waypoint+PRPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 153FD6451CA1D0DF00969E9B /* Waypoint+PRPlace.m */; };
+		1558B9321C962A5A008A4210 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B9311C962A5A008A4210 /* main.m */; };
+		1558B9351C962A5A008A4210 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B9341C962A5A008A4210 /* AppDelegate.m */; };
+		1558B9381C962A5A008A4210 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B9371C962A5A008A4210 /* MapViewController.m */; };
+		1558B93B1C962A5A008A4210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1558B9391C962A5A008A4210 /* Main.storyboard */; };
+		1558B93D1C962A5A008A4210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558B93C1C962A5A008A4210 /* Assets.xcassets */; };
+		1558B9401C962A5A008A4210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1558B93E1C962A5A008A4210 /* LaunchScreen.storyboard */; };
+		1558B94B1C962A5A008A4210 /* ItineraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B94A1C962A5A008A4210 /* ItineraryTests.m */; };
+		1558B9561C962A5A008A4210 /* ItineraryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B9551C962A5A008A4210 /* ItineraryUITests.m */; };
+		1558B9641C962AD9008A4210 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1558B9631C962AD9008A4210 /* MapKit.framework */; };
+		155AADB31C9F479000D8BE10 /* SearchPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155AADB21C9F479000D8BE10 /* SearchPlacesTableViewController.m */; };
+		15AD58EE1CA08A9000DDCF4E /* PlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AD58ED1CA08A9000DDCF4E /* PlaceTableViewCell.m */; };
+		FB5DCF9495FA24F4F7B9CA9B /* libPods-Itinerary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B23899371495E17EC25BC4 /* libPods-Itinerary.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1558B9471C962A5A008A4210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1558B9251C962A5A008A4210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1558B92C1C962A5A008A4210;
+			remoteInfo = Itinerary;
+		};
+		1558B9521C962A5A008A4210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1558B9251C962A5A008A4210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1558B92C1C962A5A008A4210;
+			remoteInfo = Itinerary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1536114D1CA33A0900F21AA8 /* ItineraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItineraryTableViewController.h; sourceTree = "<group>"; };
+		1536114E1CA33A0900F21AA8 /* ItineraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItineraryTableViewController.m; sourceTree = "<group>"; };
+		153611501CA3F6A000F21AA8 /* WaypointTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointTableViewCell.h; sourceTree = "<group>"; };
+		153611511CA3F6A000F21AA8 /* WaypointTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointTableViewCell.m; sourceTree = "<group>"; };
+		153FD6261CA1C69000969E9B /* ItineraryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItineraryModel.xcdatamodel; sourceTree = "<group>"; };
+		153FD6291CA1CE1A00969E9B /* Itinerary+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Itinerary+CoreDataProperties.h"; sourceTree = "<group>"; };
+		153FD62A1CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Itinerary+CoreDataProperties.m"; sourceTree = "<group>"; };
+		153FD62B1CA1CE1A00969E9B /* Itinerary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Itinerary.h; sourceTree = "<group>"; };
+		153FD62C1CA1CE1A00969E9B /* Itinerary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Itinerary.m; sourceTree = "<group>"; };
+		153FD63B1CA1CF8600969E9B /* Waypoint+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Waypoint+CoreDataProperties.h"; sourceTree = "<group>"; };
+		153FD63C1CA1CF8600969E9B /* Waypoint+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Waypoint+CoreDataProperties.m"; sourceTree = "<group>"; };
+		153FD63D1CA1CF8600969E9B /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
+		153FD63E1CA1CF8600969E9B /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
+		153FD6441CA1D0DF00969E9B /* Waypoint+PRPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Waypoint+PRPlace.h"; sourceTree = "<group>"; };
+		153FD6451CA1D0DF00969E9B /* Waypoint+PRPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Waypoint+PRPlace.m"; sourceTree = "<group>"; };
+		1558B92D1C962A5A008A4210 /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1558B9311C962A5A008A4210 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1558B9331C962A5A008A4210 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1558B9341C962A5A008A4210 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1558B9361C962A5A008A4210 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1558B9371C962A5A008A4210 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1558B93A1C962A5A008A4210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1558B93C1C962A5A008A4210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1558B93F1C962A5A008A4210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1558B9411C962A5A008A4210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1558B9461C962A5A008A4210 /* ItineraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItineraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1558B94A1C962A5A008A4210 /* ItineraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItineraryTests.m; sourceTree = "<group>"; };
+		1558B94C1C962A5A008A4210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1558B9511C962A5A008A4210 /* ItineraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItineraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1558B9551C962A5A008A4210 /* ItineraryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItineraryUITests.m; sourceTree = "<group>"; };
+		1558B9571C962A5A008A4210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1558B9631C962AD9008A4210 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		155AADB11C9F479000D8BE10 /* SearchPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPlacesTableViewController.h; sourceTree = "<group>"; };
+		155AADB21C9F479000D8BE10 /* SearchPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPlacesTableViewController.m; sourceTree = "<group>"; };
+		15AACF3F1CA59B5100EC1401 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		15AD58EC1CA08A9000DDCF4E /* PlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceTableViewCell.h; sourceTree = "<group>"; };
+		15AD58ED1CA08A9000DDCF4E /* PlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceTableViewCell.m; sourceTree = "<group>"; };
+		23B23899371495E17EC25BC4 /* libPods-Itinerary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Itinerary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F730CD8A201549701A74FD /* Pods-Itinerary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.release.xcconfig"; sourceTree = "<group>"; };
+		FA8CC3E0FE33850E6BF44685 /* Pods-Itinerary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1558B92A1C962A5A008A4210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1558B9641C962AD9008A4210 /* MapKit.framework in Frameworks */,
+				FB5DCF9495FA24F4F7B9CA9B /* libPods-Itinerary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B9431C962A5A008A4210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B94E1C962A5A008A4210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		153FD6281CA1CAF600969E9B /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				153FD6291CA1CE1A00969E9B /* Itinerary+CoreDataProperties.h */,
+				153FD62A1CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m */,
+				153FD62B1CA1CE1A00969E9B /* Itinerary.h */,
+				153FD62C1CA1CE1A00969E9B /* Itinerary.m */,
+				153FD63B1CA1CF8600969E9B /* Waypoint+CoreDataProperties.h */,
+				153FD63C1CA1CF8600969E9B /* Waypoint+CoreDataProperties.m */,
+				153FD63D1CA1CF8600969E9B /* Waypoint.h */,
+				153FD63E1CA1CF8600969E9B /* Waypoint.m */,
+				153FD6441CA1D0DF00969E9B /* Waypoint+PRPlace.h */,
+				153FD6451CA1D0DF00969E9B /* Waypoint+PRPlace.m */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		1558B9241C962A5A008A4210 = {
+			isa = PBXGroup;
+			children = (
+				15AACF3F1CA59B5100EC1401 /* README.md */,
+				1558B92F1C962A5A008A4210 /* Itinerary */,
+				1558B9491C962A5A008A4210 /* ItineraryTests */,
+				1558B9541C962A5A008A4210 /* ItineraryUITests */,
+				1558B92E1C962A5A008A4210 /* Products */,
+				C28E22C5E5F1DA4E9CA6A569 /* Pods */,
+				9FF4C40AE5C235E114199061 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1558B92E1C962A5A008A4210 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1558B92D1C962A5A008A4210 /* Itinerary.app */,
+				1558B9461C962A5A008A4210 /* ItineraryTests.xctest */,
+				1558B9511C962A5A008A4210 /* ItineraryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1558B92F1C962A5A008A4210 /* Itinerary */ = {
+			isa = PBXGroup;
+			children = (
+				153FD6281CA1CAF600969E9B /* ManagedObjects */,
+				1558B9331C962A5A008A4210 /* AppDelegate.h */,
+				1558B9341C962A5A008A4210 /* AppDelegate.m */,
+				1558B9361C962A5A008A4210 /* MapViewController.h */,
+				1558B9371C962A5A008A4210 /* MapViewController.m */,
+				1558B9391C962A5A008A4210 /* Main.storyboard */,
+				1558B93C1C962A5A008A4210 /* Assets.xcassets */,
+				1558B93E1C962A5A008A4210 /* LaunchScreen.storyboard */,
+				1558B9411C962A5A008A4210 /* Info.plist */,
+				1558B9301C962A5A008A4210 /* Supporting Files */,
+				155AADB11C9F479000D8BE10 /* SearchPlacesTableViewController.h */,
+				155AADB21C9F479000D8BE10 /* SearchPlacesTableViewController.m */,
+				15AD58EC1CA08A9000DDCF4E /* PlaceTableViewCell.h */,
+				15AD58ED1CA08A9000DDCF4E /* PlaceTableViewCell.m */,
+				153FD6251CA1C69000969E9B /* ItineraryModel.xcdatamodeld */,
+				1536114D1CA33A0900F21AA8 /* ItineraryTableViewController.h */,
+				1536114E1CA33A0900F21AA8 /* ItineraryTableViewController.m */,
+				153611501CA3F6A000F21AA8 /* WaypointTableViewCell.h */,
+				153611511CA3F6A000F21AA8 /* WaypointTableViewCell.m */,
+			);
+			path = Itinerary;
+			sourceTree = "<group>";
+		};
+		1558B9301C962A5A008A4210 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1558B9311C962A5A008A4210 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1558B9491C962A5A008A4210 /* ItineraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				1558B94A1C962A5A008A4210 /* ItineraryTests.m */,
+				1558B94C1C962A5A008A4210 /* Info.plist */,
+			);
+			path = ItineraryTests;
+			sourceTree = "<group>";
+		};
+		1558B9541C962A5A008A4210 /* ItineraryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1558B9551C962A5A008A4210 /* ItineraryUITests.m */,
+				1558B9571C962A5A008A4210 /* Info.plist */,
+			);
+			path = ItineraryUITests;
+			sourceTree = "<group>";
+		};
+		9FF4C40AE5C235E114199061 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1558B9631C962AD9008A4210 /* MapKit.framework */,
+				23B23899371495E17EC25BC4 /* libPods-Itinerary.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C28E22C5E5F1DA4E9CA6A569 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA8CC3E0FE33850E6BF44685 /* Pods-Itinerary.debug.xcconfig */,
+				93F730CD8A201549701A74FD /* Pods-Itinerary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1558B92C1C962A5A008A4210 /* Itinerary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1558B95A1C962A5A008A4210 /* Build configuration list for PBXNativeTarget "Itinerary" */;
+			buildPhases = (
+				3334FD1138870CD3D728CD39 /* Check Pods Manifest.lock */,
+				1558B9291C962A5A008A4210 /* Sources */,
+				1558B92A1C962A5A008A4210 /* Frameworks */,
+				1558B92B1C962A5A008A4210 /* Resources */,
+				9651C6164851803E9E58E570 /* Embed Pods Frameworks */,
+				965C71E4BC10F6A4157C9C5B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Itinerary;
+			productName = Itinerary;
+			productReference = 1558B92D1C962A5A008A4210 /* Itinerary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1558B9451C962A5A008A4210 /* ItineraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1558B95D1C962A5A008A4210 /* Build configuration list for PBXNativeTarget "ItineraryTests" */;
+			buildPhases = (
+				1558B9421C962A5A008A4210 /* Sources */,
+				1558B9431C962A5A008A4210 /* Frameworks */,
+				1558B9441C962A5A008A4210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1558B9481C962A5A008A4210 /* PBXTargetDependency */,
+			);
+			name = ItineraryTests;
+			productName = ItineraryTests;
+			productReference = 1558B9461C962A5A008A4210 /* ItineraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1558B9501C962A5A008A4210 /* ItineraryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1558B9601C962A5A008A4210 /* Build configuration list for PBXNativeTarget "ItineraryUITests" */;
+			buildPhases = (
+				1558B94D1C962A5A008A4210 /* Sources */,
+				1558B94E1C962A5A008A4210 /* Frameworks */,
+				1558B94F1C962A5A008A4210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1558B9531C962A5A008A4210 /* PBXTargetDependency */,
+			);
+			name = ItineraryUITests;
+			productName = ItineraryUITests;
+			productReference = 1558B9511C962A5A008A4210 /* ItineraryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1558B9251C962A5A008A4210 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = smuellner;
+				TargetAttributes = {
+					1558B92C1C962A5A008A4210 = {
+						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					1558B9451C962A5A008A4210 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 1558B92C1C962A5A008A4210;
+					};
+					1558B9501C962A5A008A4210 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 1558B92C1C962A5A008A4210;
+					};
+				};
+			};
+			buildConfigurationList = 1558B9281C962A5A008A4210 /* Build configuration list for PBXProject "Itinerary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1558B9241C962A5A008A4210;
+			productRefGroup = 1558B92E1C962A5A008A4210 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1558B92C1C962A5A008A4210 /* Itinerary */,
+				1558B9451C962A5A008A4210 /* ItineraryTests */,
+				1558B9501C962A5A008A4210 /* ItineraryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1558B92B1C962A5A008A4210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1558B9401C962A5A008A4210 /* LaunchScreen.storyboard in Resources */,
+				1558B93D1C962A5A008A4210 /* Assets.xcassets in Resources */,
+				1558B93B1C962A5A008A4210 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B9441C962A5A008A4210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B94F1C962A5A008A4210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3334FD1138870CD3D728CD39 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9651C6164851803E9E58E570 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		965C71E4BC10F6A4157C9C5B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1558B9291C962A5A008A4210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153FD63F1CA1CF8600969E9B /* Waypoint+CoreDataProperties.m in Sources */,
+				1558B9381C962A5A008A4210 /* MapViewController.m in Sources */,
+				1558B9351C962A5A008A4210 /* AppDelegate.m in Sources */,
+				15AD58EE1CA08A9000DDCF4E /* PlaceTableViewCell.m in Sources */,
+				1558B9321C962A5A008A4210 /* main.m in Sources */,
+				153FD6311CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m in Sources */,
+				153FD6401CA1CF8600969E9B /* Waypoint.m in Sources */,
+				1536114F1CA33A0900F21AA8 /* ItineraryTableViewController.m in Sources */,
+				153611521CA3F6A000F21AA8 /* WaypointTableViewCell.m in Sources */,
+				153FD6321CA1CE1A00969E9B /* Itinerary.m in Sources */,
+				155AADB31C9F479000D8BE10 /* SearchPlacesTableViewController.m in Sources */,
+				153FD6461CA1D0DF00969E9B /* Waypoint+PRPlace.m in Sources */,
+				153FD6271CA1C69000969E9B /* ItineraryModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B9421C962A5A008A4210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1558B94B1C962A5A008A4210 /* ItineraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1558B94D1C962A5A008A4210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1558B9561C962A5A008A4210 /* ItineraryUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1558B9481C962A5A008A4210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1558B92C1C962A5A008A4210 /* Itinerary */;
+			targetProxy = 1558B9471C962A5A008A4210 /* PBXContainerItemProxy */;
+		};
+		1558B9531C962A5A008A4210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1558B92C1C962A5A008A4210 /* Itinerary */;
+			targetProxy = 1558B9521C962A5A008A4210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1558B9391C962A5A008A4210 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1558B93A1C962A5A008A4210 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1558B93E1C962A5A008A4210 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1558B93F1C962A5A008A4210 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1558B9581C962A5A008A4210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1558B9591C962A5A008A4210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1558B95B1C962A5A008A4210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8CC3E0FE33850E6BF44685 /* Pods-Itinerary.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Itinerary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.Itinerary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1558B95C1C962A5A008A4210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F730CD8A201549701A74FD /* Pods-Itinerary.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Itinerary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.Itinerary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1558B95E1C962A5A008A4210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ItineraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.ItineraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Itinerary.app/Itinerary";
+			};
+			name = Debug;
+		};
+		1558B95F1C962A5A008A4210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ItineraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.ItineraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Itinerary.app/Itinerary";
+			};
+			name = Release;
+		};
+		1558B9611C962A5A008A4210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ItineraryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.ItineraryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Itinerary;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1558B9621C962A5A008A4210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ItineraryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = world.maps.ItineraryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Itinerary;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1558B9281C962A5A008A4210 /* Build configuration list for PBXProject "Itinerary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1558B9581C962A5A008A4210 /* Debug */,
+				1558B9591C962A5A008A4210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1558B95A1C962A5A008A4210 /* Build configuration list for PBXNativeTarget "Itinerary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1558B95B1C962A5A008A4210 /* Debug */,
+				1558B95C1C962A5A008A4210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1558B95D1C962A5A008A4210 /* Build configuration list for PBXNativeTarget "ItineraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1558B95E1C962A5A008A4210 /* Debug */,
+				1558B95F1C962A5A008A4210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1558B9601C962A5A008A4210 /* Build configuration list for PBXNativeTarget "ItineraryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1558B9611C962A5A008A4210 /* Debug */,
+				1558B9621C962A5A008A4210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		153FD6251CA1C69000969E9B /* ItineraryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				153FD6261CA1C69000969E9B /* ItineraryModel.xcdatamodel */,
+			);
+			currentVersion = 153FD6261CA1C69000969E9B /* ItineraryModel.xcdatamodel */;
+			path = ItineraryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1558B9251C962A5A008A4210 /* Project object */;
+}
