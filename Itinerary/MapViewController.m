@@ -10,6 +10,7 @@
 #import "SearchPlacesTableViewController.h"
 #import "ItineraryTableViewController.h"
 #import "SCLAlertView.h"
+#import "ColoredPointAnnotation.h"
 #import <PlacesAndRouting.h>
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate, UISearchControllerDelegate, ItineraryTableViewControllerDelegate>
@@ -110,12 +111,18 @@
                                               [alert hideView];
                                               if(routeWithWayPoints && !error) {
                                                   for(PRRoute * route in routeWithWayPoints.route) {
-                                                      [self.mapView setCenterCoordinate:route.waypoint.firstObject.mappedPosition.coordinate];
                                                       // add markers for waypoints
                                                       for(PRWaypoint * waypoint in route.waypoint) {
-                                                          MKPointAnnotation *waypointAnnotation = [[MKPointAnnotation alloc] init];
+                                                          ColoredPointAnnotation *waypointAnnotation = [[ColoredPointAnnotation alloc] init];
                                                           waypointAnnotation.coordinate = waypoint.mappedPosition.coordinate;
                                                           waypointAnnotation.title = waypoint.label;
+                                                          if(waypoint == route.waypoint.firstObject) {
+                                                              waypointAnnotation.pinTintColor = [UIColor greenColor];
+                                                          } else if(waypoint == route.waypoint.lastObject) {
+                                                              waypointAnnotation.pinTintColor = [UIColor redColor];
+                                                          } else {
+                                                              waypointAnnotation.pinTintColor = [UIColor purpleColor];
+                                                          }
                                                           [self.mapView addAnnotation:waypointAnnotation];
                                                       }
                                                       // draw polyline for shape
@@ -127,6 +134,9 @@
                                                       MKPolyline *polyline = [MKPolyline polylineWithCoordinates:coordinates
                                                                                                            count:maxCount];
                                                       [self.mapView addOverlay:polyline];
+                                                      [self.mapView showAnnotations:self.mapView.annotations
+                                                                           animated:YES];
+
                                                   }
                                               } else {
                                                   SCLAlertView *errorAlertView = [[SCLAlertView alloc] init];
@@ -151,14 +161,18 @@
     return nil;
 }
 
-/*
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    MKAnnotationView *pinView = [[MKAnnotationView alloc] init];
-
-    return pinView;
+    static NSString * const kPinAnnotationIdentifier = @"PinIdentifier";
+    ColoredPointAnnotation *coloredPointAnnotation = annotation;
+    MKPinAnnotationView *pinAnnotationView = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:kPinAnnotationIdentifier];
+    if(!pinAnnotationView){
+        pinAnnotationView = [[MKPinAnnotationView alloc] initWithAnnotation:coloredPointAnnotation reuseIdentifier:kPinAnnotationIdentifier];
+    }
+    pinAnnotationView.pinTintColor = coloredPointAnnotation.pinTintColor;
+    pinAnnotationView.enabled = YES;
+    return pinAnnotationView;
 }
- */
 
 #pragma mark - UISearchControllerDelegate method
 - (void)willPresentSearchController:(UISearchController *)searchController {

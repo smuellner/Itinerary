@@ -26,6 +26,7 @@
 		1558B9641C962AD9008A4210 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1558B9631C962AD9008A4210 /* MapKit.framework */; };
 		155AADB31C9F479000D8BE10 /* SearchPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155AADB21C9F479000D8BE10 /* SearchPlacesTableViewController.m */; };
 		15AD58EE1CA08A9000DDCF4E /* PlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AD58ED1CA08A9000DDCF4E /* PlaceTableViewCell.m */; };
+		15D38D661CA7090400C74E21 /* ColoredPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D38D651CA7090400C74E21 /* ColoredPointAnnotation.m */; };
 		FB5DCF9495FA24F4F7B9CA9B /* libPods-Itinerary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B23899371495E17EC25BC4 /* libPods-Itinerary.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		15AACF3F1CA59B5100EC1401 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15AD58EC1CA08A9000DDCF4E /* PlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceTableViewCell.h; sourceTree = "<group>"; };
 		15AD58ED1CA08A9000DDCF4E /* PlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceTableViewCell.m; sourceTree = "<group>"; };
+		15D38D641CA7090400C74E21 /* ColoredPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredPointAnnotation.h; sourceTree = "<group>"; };
+		15D38D651CA7090400C74E21 /* ColoredPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredPointAnnotation.m; sourceTree = "<group>"; };
 		23B23899371495E17EC25BC4 /* libPods-Itinerary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Itinerary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F730CD8A201549701A74FD /* Pods-Itinerary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.release.xcconfig"; sourceTree = "<group>"; };
 		FA8CC3E0FE33850E6BF44685 /* Pods-Itinerary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 				1558B9341C962A5A008A4210 /* AppDelegate.m */,
 				1558B9361C962A5A008A4210 /* MapViewController.h */,
 				1558B9371C962A5A008A4210 /* MapViewController.m */,
+				15D38D641CA7090400C74E21 /* ColoredPointAnnotation.h */,
+				15D38D651CA7090400C74E21 /* ColoredPointAnnotation.m */,
 				1558B9391C962A5A008A4210 /* Main.storyboard */,
 				1558B93C1C962A5A008A4210 /* Assets.xcassets */,
 				1558B93E1C962A5A008A4210 /* LaunchScreen.storyboard */,
@@ -418,6 +423,7 @@
 				15AD58EE1CA08A9000DDCF4E /* PlaceTableViewCell.m in Sources */,
 				1558B9321C962A5A008A4210 /* main.m in Sources */,
 				153FD6311CA1CE1A00969E9B /* Itinerary+CoreDataProperties.m in Sources */,
+				15D38D661CA7090400C74E21 /* ColoredPointAnnotation.m in Sources */,
 				153FD6401CA1CF8600969E9B /* Waypoint.m in Sources */,
 				1536114F1CA33A0900F21AA8 /* ItineraryTableViewController.m in Sources */,
 				153611521CA3F6A000F21AA8 /* WaypointTableViewCell.m in Sources */,

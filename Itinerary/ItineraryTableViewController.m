@@ -47,8 +47,8 @@ struct {
     [super didReceiveMemoryWarning];
 }
 
-- (void)setEditing:(BOOL)editing {
-    [super setEditing:editing];
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
     self.calculateRouteButton.enabled = editing ? NO : self.waypoints.count > 1;
 }
 
