@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1558B8CE1C961D9E008A4210 /* PlacesAndRouting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1558B8C31C961D9E008A4210 /* PlacesAndRouting.framework */; };
 		1558B8F31C9620A0008A4210 /* PRPlacesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1558B8EE1C9620A0008A4210 /* PRPlacesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1558B8F41C9620A0008A4210 /* PRPlacesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B8EF1C9620A0008A4210 /* PRPlacesManager.m */; };
 		1558B8F51C9620A0008A4210 /* PRRoutingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1558B8F11C9620A0008A4210 /* PRRoutingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1558B8F61C9620A0008A4210 /* PRRoutingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B8F21C9620A0008A4210 /* PRRoutingManager.m */; };
 		1558B8FB1C9620B3008A4210 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1558B8F81C9620B3008A4210 /* Info.plist */; };
-		1558B8FE1C962217008A4210 /* PRPlacesManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B8FD1C962217008A4210 /* PRPlacesManagerTests.m */; };
 		1558B96B1C9636AA008A4210 /* PRPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = 1558B9691C9636AA008A4210 /* PRPlace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1558B96C1C9636AA008A4210 /* PRPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1558B96A1C9636AA008A4210 /* PRPlace.m */; };
 		1558B9731C965097008A4210 /* PRSearchAtLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1558B9711C965097008A4210 /* PRSearchAtLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,28 +43,15 @@
 		15A00E951C9CC97300456CF2 /* PRSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A00E931C9CC97300456CF2 /* PRSummary.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1558B8CF1C961D9E008A4210 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1558B8BA1C961D9E008A4210 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1558B8C21C961D9E008A4210;
-			remoteInfo = PlacesAndRouting;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		15564A841CA555E200097D9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1558B8C31C961D9E008A4210 /* PlacesAndRouting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesAndRouting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1558B8CD1C961D9E008A4210 /* PlacesAndRoutingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesAndRoutingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1558B8D41C961D9F008A4210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1558B8EE1C9620A0008A4210 /* PRPlacesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPlacesManager.h; sourceTree = "<group>"; };
 		1558B8EF1C9620A0008A4210 /* PRPlacesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPlacesManager.m; sourceTree = "<group>"; };
 		1558B8F11C9620A0008A4210 /* PRRoutingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRoutingManager.h; sourceTree = "<group>"; };
 		1558B8F21C9620A0008A4210 /* PRRoutingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRRoutingManager.m; sourceTree = "<group>"; };
 		1558B8F81C9620B3008A4210 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1558B8F91C9620B3008A4210 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		1558B8FD1C962217008A4210 /* PRPlacesManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPlacesManagerTests.m; sourceTree = "<group>"; };
 		1558B9691C9636AA008A4210 /* PRPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPlace.h; sourceTree = "<group>"; };
 		1558B96A1C9636AA008A4210 /* PRPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPlace.m; sourceTree = "<group>"; };
 		1558B9711C965097008A4210 /* PRSearchAtLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSearchAtLocation.h; sourceTree = "<group>"; };
@@ -107,14 +92,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1558B8CA1C961D9E008A4210 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1558B8CE1C961D9E008A4210 /* PlacesAndRouting.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,7 +107,6 @@
 				1558B8F71C9620B3008A4210 /* Framework */,
 				1558B8ED1C9620A0008A4210 /* Places */,
 				1558B8F01C9620A0008A4210 /* Routing */,
-				1558B8D11C961D9E008A4210 /* PlacesAndRoutingTests */,
 				1558B8C41C961D9E008A4210 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,18 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				1558B8C31C961D9E008A4210 /* PlacesAndRouting.framework */,
-				1558B8CD1C961D9E008A4210 /* PlacesAndRoutingTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1558B8D11C961D9E008A4210 /* PlacesAndRoutingTests */ = {
-			isa = PBXGroup;
-			children = (
-				1558B8FD1C962217008A4210 /* PRPlacesManagerTests.m */,
-				1558B8D41C961D9F008A4210 /* Info.plist */,
-			);
-			path = PlacesAndRoutingTests;
 			sourceTree = "<group>";
 		};
 		1558B8ED1C9620A0008A4210 /* Places */ = {
@@ -261,24 +227,6 @@
 			productReference = 1558B8C31C961D9E008A4210 /* PlacesAndRouting.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1558B8CC1C961D9E008A4210 /* PlacesAndRoutingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1558B8DA1C961D9F008A4210 /* Build configuration list for PBXNativeTarget "PlacesAndRoutingTests" */;
-			buildPhases = (
-				1558B8C91C961D9E008A4210 /* Sources */,
-				1558B8CA1C961D9E008A4210 /* Frameworks */,
-				1558B8CB1C961D9E008A4210 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1558B8D01C961D9E008A4210 /* PBXTargetDependency */,
-			);
-			name = PlacesAndRoutingTests;
-			productName = PlacesAndRoutingTests;
-			productReference = 1558B8CD1C961D9E008A4210 /* PlacesAndRoutingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -289,9 +237,6 @@
 				ORGANIZATIONNAME = smuellner;
 				TargetAttributes = {
 					1558B8C21C961D9E008A4210 = {
-						CreatedOnToolsVersion = 7.2.1;
-					};
-					1558B8CC1C961D9E008A4210 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -309,7 +254,6 @@
 			projectRoot = "";
 			targets = (
 				1558B8C21C961D9E008A4210 /* PlacesAndRouting */,
-				1558B8CC1C961D9E008A4210 /* PlacesAndRoutingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,13 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1558B8FB1C9620B3008A4210 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1558B8CB1C961D9E008A4210 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,23 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1558B8C91C961D9E008A4210 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1558B8FE1C962217008A4210 /* PRPlacesManagerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1558B8D01C961D9E008A4210 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1558B8C21C961D9E008A4210 /* PlacesAndRouting */;
-			targetProxy = 1558B8CF1C961D9E008A4210 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1558B8D51C961D9F008A4210 /* Debug */ = {
@@ -497,26 +418,6 @@
 			};
 			name = Release;
 		};
-		1558B8DB1C961D9F008A4210 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PlacesAndRoutingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = world.maps.PlacesAndRoutingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1558B8DC1C961D9F008A4210 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PlacesAndRoutingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = world.maps.PlacesAndRoutingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,15 +435,6 @@
 			buildConfigurations = (
 				1558B8D81C961D9F008A4210 /* Debug */,
 				1558B8D91C961D9F008A4210 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1558B8DA1C961D9F008A4210 /* Build configuration list for PBXNativeTarget "PlacesAndRoutingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1558B8DB1C961D9F008A4210 /* Debug */,
-				1558B8DC1C961D9F008A4210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

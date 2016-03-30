@@ -595,6 +595,7 @@
 		};
 		1558B95E1C962A5A008A4210 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8CC3E0FE33850E6BF44685 /* Pods-Itinerary.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ItineraryTests/Info.plist;

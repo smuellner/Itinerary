@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Itinerary.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1558B8CC1C961D9E008A4210"
+               BuildableName = "PlacesAndRoutingTests.xctest"
+               BlueprintName = "PlacesAndRoutingTests"
+               ReferencedContainer = "container:PlacesAndRouting/PlacesAndRouting.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

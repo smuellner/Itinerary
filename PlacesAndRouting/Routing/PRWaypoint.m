@@ -10,10 +10,6 @@
 #import "CLLocation+Dictionary.h"
 
 @implementation PRWaypoint
-+ (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"linkId" : @"id"};
-}
-
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dict {
     if (!dict[@"mappedPosition"] && !dict[@"originalPosition"]) return NO;
     _mappedPosition = [CLLocation initWithDictionary:dict[@"mappedPosition"]];
