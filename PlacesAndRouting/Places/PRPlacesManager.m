@@ -10,7 +10,6 @@
 
 
 #import "PRPlacesManager.h"
-#import "AFHTTPSessionManager.h"
 #import "YYModel.h"
 
 @implementation PRPlacesManager
@@ -24,15 +23,25 @@ NSString * const kSearchAtLocationURL = @"https://places.cit.api.here.com/places
                              withQuery:(NSString *)query
                      completionHandler:(void (^)(PRSearchAtLocation*, NSError*))completionBlock {
     NSString *at = [NSString stringWithFormat:@"%f,%f", coordinate.latitude, coordinate.longitude];
-    NSDictionary *parameters = @{@"app_id":self.appId, @"app_code":self.appCode, @"at":at, @"q":query};
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSURLSessionTask *dataTask = [manager GET:kSearchAtLocationURL parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        PRSearchAtLocation *places = [PRSearchAtLocation yy_modelWithJSON:responseObject];
-        completionBlock(places, nil);
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        completionBlock(nil, error);
-    }];
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:kSearchAtLocationURL];
+    components.queryItems = @[ [NSURLQueryItem queryItemWithName:@"app_id" value:self.appId],
+                               [NSURLQueryItem queryItemWithName:@"app_code" value:self.appCode],
+                               [NSURLQueryItem queryItemWithName:@"at" value:at],
+                               [NSURLQueryItem queryItemWithName:@"q" value:query] ];
+    NSURLSessionTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:components.URL
+                                                             completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      if(nil == error) {
+                                          PRSearchAtLocation *places = [PRSearchAtLocation yy_modelWithJSON:data];
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              completionBlock(places, nil);
+                                          });
+                                      } else {
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              completionBlock(nil, error);
+                                          });
+                                      }
+                                  }];
     [dataTask resume];
     return dataTask;
 }

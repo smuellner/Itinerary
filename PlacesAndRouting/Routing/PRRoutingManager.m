@@ -7,7 +7,6 @@
 //
 
 #import "PRRoutingManager.h"
-#import "AFHTTPSessionManager.h"
 #import "YYModel.h"
 
 NSString *const kPRRouteAttributeShape              = @"sh";
@@ -35,13 +34,12 @@ NSString * const kCalculateRouteURL = @"https://route.cit.api.here.com/routing/7
 - (NSURLSessionTask *)calculateRouteWithWayPoints:(NSArray<CLLocation *>*)locations
                                andRouteAttributes:(PRRouteAttributes)routeAttributes
                                 completionHandler:(void (^)(PRRouteWithWayPoints*, NSError*))completionBlock {
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:@{@"app_id":self.appId,
-                                                                                      @"app_code":self.appCode,
-                                                                                      @"mode":@"fastest;car;traffic:disabled"}];
+    NSMutableArray *queryItems = [NSMutableArray arrayWithArray: @[[NSURLQueryItem queryItemWithName:@"app_id" value:self.appId],
+                                                                   [NSURLQueryItem queryItemWithName:@"app_code" value:self.appCode],
+                                                                   [NSURLQueryItem queryItemWithName:@"mode" value:@"fastest;car;traffic:disabled"] ]];
     if(routeAttributes & ~PRRouteAttributeNone)
     {
-        [parameters setObject:[self parametersForRouteAttributes:routeAttributes]
-                       forKey:@"routeAttributes"];
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"routeAttributes" value:[self parametersForRouteAttributes:routeAttributes]]];
     }
     NSUInteger index = 0;
     for(CLLocation *location in locations)
@@ -51,18 +49,26 @@ NSString * const kCalculateRouteURL = @"https://route.cit.api.here.com/routing/7
             [waypoint appendString:@"stopOver!"];
         }
         [waypoint appendFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude];
-        [parameters setObject:waypoint
-                       forKey:[NSString stringWithFormat:@"waypoint%lu", (unsigned long)index]];
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:[NSString stringWithFormat:@"waypoint%lu", (unsigned long)index] value:waypoint]];
         index++;
     }
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSURLSessionTask *dataTask = [manager GET:kCalculateRouteURL parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        PRRouteWithWayPoints *places = [PRRouteWithWayPoints yy_modelWithJSON:responseObject];
-        completionBlock(places, nil);
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        completionBlock(nil, error);
-    }];
+
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:kCalculateRouteURL];
+    components.queryItems = queryItems;
+    NSURLSessionTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:components.URL
+                                                             completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      if(nil == error) {
+                                          PRRouteWithWayPoints *routeWithWayPoints = [PRRouteWithWayPoints yy_modelWithJSON:data];
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              completionBlock(routeWithWayPoints, nil);
+                                          });
+                                      } else {
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              completionBlock(nil, error);
+                                          });
+                                      }
+                                  }];
     [dataTask resume];
     return dataTask;
 }

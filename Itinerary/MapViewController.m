@@ -89,7 +89,6 @@
 - (void)calculateRoute:(NSArray<Waypoint *> *)waypoints {
     [self.navigationController popToRootViewControllerAnimated:YES];
     self.searchController.active = NO;
-    // TODO show progress dialog
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     alert.customViewColor = [UIColor blueColor];
     [alert showWaiting:self

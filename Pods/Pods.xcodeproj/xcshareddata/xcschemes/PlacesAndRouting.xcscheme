@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '35D401742D1D7141F366B299'
+               BlueprintIdentifier = '44506F5EF624EDF555A3D447'
                BlueprintName = 'PlacesAndRouting'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPlacesAndRouting.a'>

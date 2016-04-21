@@ -8,7 +8,6 @@
 
 #import "SearchPlacesTableViewController.h"
 #import "PlaceTableViewCell.h"
-#import "UIImageView+AFNetworking.h"
 #import "Itinerary.h"
 #import "Waypoint.h"
 #import "Waypoint+PRPlace.h"
@@ -18,25 +17,33 @@
 @interface SearchPlacesTableViewController()
 @property (nonatomic, strong) NSArray<PRPlace*> *places;
 @property (nonatomic, strong) NSMutableArray<NSString*> *placeIds;
+@property (nonatomic, strong) NSOperationQueue *imageOperationQueue;
+@property (nonatomic, strong) NSCache *imageCache;
 @end
 
 @implementation SearchPlacesTableViewController
 
 -(void)viewDidLoad {
     self.placeIds = [NSMutableArray array];
+    self.imageOperationQueue = [[NSOperationQueue alloc]init];
+    self.imageOperationQueue.maxConcurrentOperationCount = 4;
+    self.imageCache = [[NSCache alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     self.navigationController.toolbarHidden = YES;
+    self.imageOperationQueue.suspended = NO;
     [self.placeIds removeAllObjects];
     Itinerary *itinerary = [Itinerary MR_findFirst];
-    if(nil != itinerary) {
-        for(Waypoint *waypoint in itinerary.waypoints) {
-            if(nil != waypoint.placeId) {
-                [self.placeIds addObject:waypoint.placeId];
-            }
+    for(Waypoint *waypoint in itinerary.waypoints) {
+        if(nil != waypoint.placeId) {
+            [self.placeIds addObject:waypoint.placeId];
         }
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    self.imageOperationQueue.suspended = YES;
 }
 
 #pragma mark - Table view data source
@@ -66,7 +73,22 @@
     if([self.placeIds containsObject:place.placeId]) {
         cell.iconImageView.image = [UIImage imageNamed:@"CheckmarkIcon"];
     } else {
-        [cell.iconImageView setImageWithURL:[NSURL URLWithString:place.icon]];
+        UIImage *placeIconFromCache = [self.imageCache objectForKey:place.icon];
+        if (placeIconFromCache) {
+            cell.iconImageView.image = placeIconFromCache;
+        }
+        else
+        {
+            [self.imageOperationQueue addOperationWithBlock:^{
+                UIImage *placeIcon = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:place.icon]]];
+                if (placeIcon != nil) {
+                    [self.imageCache setObject:placeIcon forKey:place.icon];
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        cell.iconImageView.image = placeIcon;
+                    }];
+                }
+            }];
+        }
     }
     cell.completionHandler = ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
